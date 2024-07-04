@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<head>
+	<title>LPC1788 LCD Board!</title>
+	<meta name="iDream" content="" />
+	<meta name="embed" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+	<link href="css/magnific-popup.css" rel="stylesheet"> 
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="main-container">
+		<nav class="main-nav">
+			<div id="logo" class="left"><img src="images/logo.png"> </div>
+			<ul class="nav right center-text">
+				<li class="btn"><a href="index.html">Home</a></li>
+				<li class="btn"><a href="tools.html">TOOLS</a></li>
+				<li class="btn"><a href="awards.html">TIME</a></li>
+				<!--<li class="btn active">TIME</li>	-->		
+				<li class="btn"><a href="contact.html">Contact</a></li>
+				<li class="btn"><a rel="nofollow" href="http://www.openfsl.com" target="_blank">BBS</a></li>
+			</ul>
+		</nav>
+		<div class="content-container">
+			<header id="awards">
+				<h1 class="center-text">LPC1788 刷屏神器！</h1>
+				<h2 class="center-text"> 
+					<p>一直对LPC1788非常感兴趣，终于开始搞起！</p>	
+					<p>24Bit TFT Driver,32Bit SDRAM,ENET Phy,Two CAN and Two USB。</p>
+				</h2>
+				<br>
+
+			</header>
+			<div id="templatemo_timeline" class="content">
+				<div class="container-fluid">
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#FAFAFA; color:#FFF">
+							<!--<div class="time_line_caption left">2016-06-21 / My Debug Toooools ：KL25 Signal！</div>	-->		            	
+							<!--<div class="time_line_icon right"><i class="fa fa-heart"></i></div>	-->
+							<!-- <h1><center>多功能多连接调试Demo板</center></h1> -->	
+							<br>
+
+							<a href="LPC1788.html" title="LPC1788 LCD Driver！" target="_blank"><img src="images/LPC1788/LPC1788Core.png" class="left"></a>
+
+							<p class="justify"></p>
+							<!-- <p class="justify"></p>	-->	
+							<p><font color="#8F4586">四层核心板设计，中间两层完整的电源GND，顺便吐槽下LPC1788的管脚，排列的乱七八糟！真没见过有这么乱的。。。</p>	
+							<p><font color="#408080">+32bit SDRAM / SPI Flash！</p>
+							<p><font color="#408080">+两路USB ：Device + Host！ </p>
+							<p><font color="#408080">+两路CAN、多路串口、一路以太网板载PHY。</p>	
+							<p><font color="#408080">+24bit 1024*768分辨率TFT Driver + I2S！</p>				
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#FFFAF0; color:#FFF">
+							<div class="time_line_caption left">2016-08-21 / 搞起 ：SDRAM！</div>	            	
+							<div class="time_line_icon right"><i class="fa fa-heart"></i></div>
+							<h1><center> -- SDRAM -- </center></h1>
+							<p><font color="#408080"> &nbsp &nbsp &nbsp &nbsp 不像LCP4370，主频204M，SDRAM时钟轻松跑102M，而LPC1788的时钟120M，那么SDRAM的时钟要么和Core一样120M，要么就是一半60MHz，60MHz显然是无法容忍的，于是选择不分频，跑120MHz！其代价就是：需要不停的调整SDRAM参数以适合120MHz！
+							</p>
+
+							<p><font color="#FF6347"> &nbsp &nbsp &nbsp &nbsp 其实配置很简单，只需要将EMCCLKSEL_Val配置为0即可：
+							</p>	
+							
+							<div align=center>
+								<a  title="Debug Toooools"><img src="images/LPC1788/SDRAM_Clock.png"></a>
+							</div>
+							
+							<p><font color="#FF6347"> &nbsp &nbsp &nbsp &nbsp 配置的寄存器为：LPC_SC->EMCCLKSEL
+							</p>	
+							<div align=center>
+								<a  title="Debug Toooools"><img src="images/LPC1788/ClockCfg_1788.png"></a>
+							</div>
+
+							<p><font color="#8B864E"> &nbsp &nbsp &nbsp &nbsp 反复读写SDRAM，8位、16位、32位测试，调试的时候发现一两次的读写是OK的，时间一长就挂掉了，于是加了个统计功能，不断调整SDRAM延时参数即可：
+							</p>
+							<div align=center>
+								<a  title="Debug Toooools"><img src="images/LPC1788/SDRAM_120M_Wrinte_Read.png"></a>
+							</div>
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+
+				</div>
+			</div>
+		</div> <!-- /.content-container -->		
+		<footer>
+			<p>Copyright &copy; 2021 OpenFSL just for kinetis！ </p>
+			<div class="social right">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</footer>
+	</div>	
+</body>
+</html>

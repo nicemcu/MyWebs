@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+	<title>KL25 Signal G Demo Board!</title>
+	<meta name="iDream" content="" />
+	<meta name="embed" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+	<link href="css/magnific-popup.css" rel="stylesheet"> 
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="main-container">
+		<nav class="main-nav">
+			<div id="logo" class="left"><img src="images/logo.png"> </div>
+			<ul class="nav right center-text">
+				<li class="btn"><a href="index.html">Home</a></li>
+				<li class="btn"><a href="tools.html">TOOLS</a></li>
+				<li class="btn"><a href="awards.html">TIME</a></li>
+				<!--<li class="btn active">TIME</li>	-->		
+				<li class="btn"><a href="contact.html">Contact</a></li>
+				<li class="btn"><a rel="nofollow" href="http://www.openfsl.com" target="_blank">BBS</a></li>
+			</ul>
+		</nav>
+		<div class="content-container">
+			<header id="awards">
+				<h1 class="center-text">多功能多连接调试Demo板</h1>
+				<h2 class="center-text"> 
+					<p>工作中常常需要用到ADC，采集的信号直流或正选50Hz，0~3.3V，每次都手忙脚乱的飞线电阻分压输出供ADC采集。</p>	
+					<p>又或者调试CAN、RS485，一堆线并到一块，乱糟糟的。为方便调试，找出之前申请的KL25样片，做了这个小工具:多功能多连接调试Demo板。</p>
+				</h2>
+				<br>
+
+			</header>
+			<div id="templatemo_timeline" class="content">
+				<div class="container-fluid">
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#FAFAFA; color:#FFF">
+							<!--<div class="time_line_caption left">2016-06-21 / My Debug Toooools ：KL25 Signal！</div>	-->		            	
+							<!--<div class="time_line_icon right"><i class="fa fa-heart"></i></div>	-->
+							<!-- <h1><center>多功能多连接调试Demo板</center></h1> -->	
+							<br>
+							<div align=center>
+								<a href="http://www.openfsl.com/forum-76-1.html" title="Debug Toooools" target="_blank"><img src="images/KL25Signal.png"></a>
+							</div>
+							<!-- <p class="justify"></p>	-->		
+							<p><font color="#408080">+电源接口：USB供电，引出4路5V、十路3.3V，多GND。</p>
+							<p><font color="#408080">+模拟输出：一路DAC，一路电位器分压调节，一路PWM滤波输出。同时支持ADC采集。</p>	
+							<p><font color="#408080">+多路GPIO扩展输出，可输出50HZ方波信号，占空比可调PWM波。</p>
+							<p><font color="#408080">+为方便调试CAN和RS485，引出十路并联在一起的排针。还增加了一个DB9的座子，这样就不用烦235了。。</p>
+							<p><font color="#8F4586">+使用QT做了一个AD波形显示，ADC采集回显，省去万用表。</p>
+							<div align=center>
+								<a  title="Debug Toooools"><img src="images/KL25SigG/KL25QtDbg.png"></a>
+							</div>							
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#E0EEE0; color:#FFF">
+							<div class="time_line_caption left">2016-06-21 / 开启调试 ：USB CDC！</div>	            	
+							<div class="time_line_icon right"><i class="fa fa-heart"></i></div>
+							<h1><center> -- USB CDC -- </center></h1>
+							<p><font color="#408080"> 之前在KL26上移植过MBed开源的USB CDC程序，想当然的以为KL26的程序应该可以直接在KL25上跑，结果。。。</p>
+							<p><font color="#408080">对FSL的例程早已无力吐槽，老老实实的移植MBed的程序至KL25的Sample Code上吧。</p>	
+							<p><font color="#8F4586">~ADC采集回显，省去万用表。</p>
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+
+				</div>
+			</div>
+		</div> <!-- /.content-container -->		
+		<footer>
+			<p>Copyright &copy; 2021 OpenFSL just for kinetis！ </p>
+			<div class="social right">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</footer>
+	</div>	
+</body>
+</html>

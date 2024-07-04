@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head>
+	<title>JFlasher...!</title>
+	<meta name="iDream" content="" />
+	<meta name="embed" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+	<link href="css/magnific-popup.css" rel="stylesheet"> 
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="main-container">
+		<nav class="main-nav">
+			<div id="logo" class="left"><img src="images/logo.png"> </div>
+			<ul class="nav right center-text">
+				<li class="btn"><a href="index.html">Home</a></li>
+				<li class="btn"><a href="tools.html">TOOLS</a></li>
+				<li class="btn"><a href="awards.html">TIME</a></li>
+				<!--<li class="btn active">TIME</li>	-->		
+				<li class="btn"><a href="contact.html">Contact</a></li>
+				<li class="btn"><a rel="nofollow" href="http://www.openfsl.com" target="_blank">BBS</a></li>
+			</ul>
+		</nav>
+		<div class="content-container">
+			<header id="awards">
+				<h1 class="center-text">iFlasher...脱机烧写器</h1>
+				<h2 class="center-text"> 
+					<p>工欲善其事必先利其器  之</p>	
+					<p>Jlink的娘家Segger产的离线烧写工具...量产的好伙伴。 </p>
+				</h2>
+					<div align=center>
+						<a href="http://www.openfsl.com/forum-76-1.html" title="iFlasher" target="_blank"><img src="images/DebugTools.jpg"></a>
+					</div>
+				<br>
+
+			</header>
+			<div id="templatemo_timeline" class="content">
+				<div class="container-fluid">
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#FAFAFA; color:#FFF">
+							<!--<div class="time_line_caption left">2016-06-21 / My Debug Toooools ：KL25 Signal！</div>	-->		            	
+							<!--<div class="time_line_icon right"><i class="fa fa-heart"></i></div>	-->
+							<!-- <h1><center>多功能多连接调试Demo板</center></h1> -->	
+							<br>
+
+							<a href="LPC1788.html" title="LPC1788 LCD Driver！" target="_blank"><img src="images/ks22Only.png" class="left"></a>
+
+							<!-- <p class="justify"></p>	-->	
+							<p><font color="#8F4586">&nbsp&nbsp&nbsp&nbsp官方的Flasher PRO支持以太网、串口等众多功能，功能强悍的同时价格也贵的相当。在“xiaohewanwan”大神的帮助下，设计了这个简易的Flasher PRO.具有功能如下：</p>
+							<p><font color="#408080">1. 独立的JLink，支持JTAG/SWD接口，Download speed up to 1 MByte/S！</p>	
+							<p><font color="#408080">2. 128MB NandFlash用于存储配置和数据文件。</p>	
+							<p><font color="#408080">3. 通过JFlash工具，将配置文件及烧写目标芯片Download到Flasher中。</p>
+							<p><font color="#408080">4. 使用充电宝、3节5号电池等供电，按下按键即可对目标芯片离线烧写。</p>
+							<p><font color="#408080">5. 对外电压输出：通过跳线可选择输出3.3V或者5V，同时增加LED指示对外供电状态。</p>	
+
+							<!--  <p><font color="#FF6347">支持的目标芯片：Any ARM7/9/11,Cortex-A5/A8/A9,Cortex-M0/M1/M3/M4/M7,好吧，几乎ARM全系.</p>	-->			
+							<h1>&nbsp &nbsp &nbsp Support：Any ARM7/9/11,Cortex-A5/A8/A9,Cortex-M0/M1/M3/M4/M7 ，额...好吧，几乎ARM全系!!另支持RX（瑞萨）、Power PC Core！</h1>	
+							<p><font color="#A08081">Flasher PRO supports a wide range of cores/devices. For a complete list, please click &nbsp <a href="https://www.segger.com/flasher-pro-supported-devices.html" target="_blank"> Here !</a>.</p>
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#FFFAF0; color:#FFF">
+							<h1><center> -- JFlash对目标芯片的配置 -- </center></h1>
+							<p><font color="#408080"> 1. 安装Segger驱动“JLink_Windows_V610e.exe”，之后插入iFlasher，打开J-Link Commander可以识别J-Link PRO / Flasher PRO V4：
+							</p>
+
+							<div align=center>
+								<a  title="J-Link Commander"><img src="images/iFlasher/iFlasherCmd.png"></a>
+							</div>
+							<p><font color="#408080">对外电压输出控制：在J-Link Commander下输入：</p>
+							<p><font color="#803021">power on  ：Switch target power on。（对外供电使能）
+							<p><font color="#803021">power off ：Switch target power off。（禁止对外供电）
+							<p><font color="#803021">power on perm ：Set target power supply default to "on"。（默认使能对外供电）
+							<p><font color="#803021">power off perm ：Set target power supply default to "on"。（默认禁止对外供电）
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#EFFAFA; color:#FFF">
+							<h1><center> -- JTAG菊花链，多目标支持 -- </center></h1>
+							<p><font color="#408080"> 使用JTAG模式，可支持同时烧写多目标芯片：
+							</p>
+
+							<div align=center>
+								<a  title="J-Link Commander"><img src="images/iFlasher/JTAG.png"></a>
+							</div>
+							<p><font color="#408080">通过TDI、TDO，将多目标手拉手连起来了。。Flasher UM中这样描述：</p>
+							<div align=center>
+								<a  title="J-Link Commander"><img src="images/iFlasher/ProgramMultipe.png"></a>
+							</div>						</div>
+					</div>					
+					<!-- *************************************************************************************************** -->
+				</div>
+			</div>
+		</div> <!-- /.content-container -->		
+		<footer>
+			<p>Copyright &copy; 2021 OpenFSL just for kinetis！ </p>
+			<div class="social right">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</footer>
+	</div>	
+</body>
+
+<script>
+window.onload=function()
+{
+	var oBtn=document.getElementById("btn_show");
+	var oDemo=document.getElementById("demo"); oBtn.onclick=function()
+	{
+		if(oDemo.style.display=="block")
+		{
+			oDemo.style.display="none";
+		}
+		else
+		{
+			oDemo.style.display="block";
+		}
+	} 
+}
+</script>
+
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<head>
+	<title>LPC4370 Labtools Board!</title>
+	<meta name="iDream" content="" />
+	<meta name="embed" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+	<link href="css/magnific-popup.css" rel="stylesheet"> 
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="main-container">
+		<nav class="main-nav">
+			<div id="logo" class="left"><img src="images/logo.png"> </div>
+			<ul class="nav right center-text">
+				<li class="btn"><a href="index.html">Home</a></li>
+				<li class="btn"><a href="awards.html">NOTE</a></li>		
+				<li class="btn"><a rel="nofollow" href="https://xarm.gitee.io/" target="_blank">BLOG</a></li>
+				<li class="btn"><a rel="nofollow" href="https://xarm.gitee.io/" target="_blank">BBS</a></li>
+				<li class="btn"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="content-container">
+			<header id="awards">
+				<h1 class="center-text">LPC4370 Labtools Board！</h1>
+				<h2 class="center-text"> 
+					<p>参考国外开源Labtools，使用LPC4370做一个示波器应用。</p>	
+					<p>换成256PIN的LPC4370，可以支持SDRAM及LCD，可以将波形直接显示出来，更简单直观。</p>
+					<p>软件代码参考RAW-OS：www.raw-os.org</p>
+				</h2>
+				<br>
+
+			</header>
+			<div id="templatemo_timeline" class="content">
+				<div class="container-fluid">
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#FAFAFA; color:#FFF">
+							<!--<div class="time_line_caption left">2016-06-21 / My Debug Toooools ：KL25 Signal！</div>	-->		            	
+							<!--<div class="time_line_icon right"><i class="fa fa-heart"></i></div>	-->
+							<!-- <h1><center>多功能多连接调试Demo板</center></h1> -->	
+							<br>
+							<div align=center>
+								<a href="https://xarm.gitee.io/" title="Debug Toooools" target="_blank"><img src="images/LPC4370/LPC4370LabTools.png"></a>
+							</div>
+							<!-- <p class="justify"></p>	-->	
+							<p><font color="#8F4586">做了个四层核心板，尺寸49mm*49mm，引出了大部分的接口，充分发挥LPC4370的优势：</p>	
+							<p><font color="#408080">+32bit SDRAM / NandFlash / QSPI Flash！。</p>
+							<p><font color="#408080">+两路USB OTG ：High Speed + Full Speed！ &nbsp &nbsp &nbsp &nbsp +两路CAN、多路串口、一路以太网板载PHY、多路串口。</p>	
+							
+							<p><font color="#408080">+24bit 1024*768分辨率TFT Driver + I2S！&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp +12bit 80MSps 高速ADC！10bit ADC。</p>				
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#FFFAF0; color:#FFF">
+							<div class="time_line_caption left">2016-08-21 / 搞起 ：LCD显示！</div>	            	
+							<div class="time_line_icon right"><i class="fa fa-heart"></i></div>
+							<h1><center> -- LCD-TFT RGB565 -- </center></h1>
+							<p><font color="#408080"> &nbsp &nbsp &nbsp &nbsp 虽然引出了24bit的LCD，不过太占管脚，没有太实际的意义，而16bit RGB565格式的显示效果也还是不错的，65536色。关于LCD管脚应用，参考手册UM10503 P901描述如下：
+							</p>
+							<div align=center>
+								<a  title="LCD PIN Config"><img src="images/LPC4370/PINConfig.png"></a>
+							</div>
+
+							<p><font color="#408080">&nbsp &nbsp &nbsp &nbsp 对于16bit 565格式的管脚配置，根据手册使用LCD_VD[3:7],LCD_VD[10:15],LCD_VD[19:23],未使用的LCD管脚均可配置为GPIO管脚或作它用。程序中管脚配置如下：</p>	
+							<div align=center>
+								<a  title="LCD PIN Config"><img src="images/LPC4370/LCD_PinCfg.png"></a>
+							</div>
+
+							<p><font color="#8F4586"> &nbsp &nbsp &nbsp &nbsp LCD需要配置SDRAM做显存，默认地址是0x28000000，所以需要先调试SDRAM，保证读写正确及SDRAM的时序满足需求，配置起来需要对照着SDRAM数据手册来调整，比较讨厌的。对于图片取模，可以使用Image2LCD工具，如图设置：</p>
+							<div align=center>
+								<a  title="Image2LCD"><img src="images/LPC4370/Image2LCD.jpg"></a>
+							</div>
+							<p><font color="#408080"> 在5寸屏800*480 分辨率，显示效果如下：（PS：实际显示效果更加细腻！！）</p>
+							<div align=center>
+								<a  title="Image2LCD"><img src="images/LPC4370/LPC4370_LCD_PIC.png"></a>
+							</div>
+							<p><font color="#408080"> 同时也实现了基本的画点、画线、矩形填充、Bresenham任意点拉线、快速画圆等基础的GUI函数。旁边的小板是它的兄弟：号称刷屏神器的LPC1788！</p>
+
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+
+
+					<!-- *************************************************************************************************** -->
+					<div class="time_line_wap left_timeline">		            
+						<div class="time_line_paragraph" style="background:#EAEAEA; color:#FFF">
+							<div class="time_line_caption left">2016-09-21 / LCD双缓存！</div>	            	
+							<div class="time_line_icon right"><i class="fa fa-heart"></i></div>
+							<h1><center> -- LCD-双缓存配置 -- </center></h1>
+							<p><font color="#408080"> &nbsp &nbsp &nbsp &nbsp 首先引用下单显存及双显存的解释：（个人感觉比较好）
+							<p><font color="#8B7355"> &nbsp &nbsp &nbsp &nbsp 在嵌入式平台Linux，主要通过framebuffer来显示UI。FrameBuffer实际上就是嵌入式系统中专门为GPU所保留的一块连续的物理内存，LCD通过专门的总线从framebuffer读取数据，显示到屏幕上。根据系统中framebuffer的数量，可以分成单buffer和双buffer两种。
+
+							<input type="button" id="btn_show" value="查看更多>>"/>
+							<div id="demo" style="display:none;"> 
+							&nbsp &nbsp &nbsp &nbsp 先来说说单buffer：CPU往framebuffer上写，LED从framebuffer读，这是两个同时进行的过程，需要在时间上配合，否则会出现问题。如果CPU往framebuffer上写的速度>LCD从framebuffer读的速度，那么就有可能出现LED在一行一行的读取前一屏数据的时候，CPU却已经刷新了整屏，从而导致显示混乱。这里要注意，LED从framebuffer读的速度并不等于屏幕的刷新频率，如果刷新频率为60hz，那么很有可能LED花了3个ms去读，剩余的时间都在等待。应该说CPU往framebuffer写的速度>LCD从framebuffer读的速度还是很困难的。如果CPU往framebuffer写的速度太慢，也会出现屏幕闪烁的问题。比如说要画一幅图，CPU首先将其填充为白色，这时LCD刷新，屏幕显示为白色，之后开始画完其他内容，屏幕正常显示。这时给用户的感觉就是屏幕一闪。这就要求CPU尽快的画完一屏，尽量保证写一屏不要跨越LED刷新周期。因此，在单framebuffer的时代，为了防止屏幕出现闪烁，我们一般是在内存中开辟一块与framebuffer同样大小的内容，将屏幕的内容都写好，然后再执行一次内存拷贝。从而使写framebuffer的时间尽可能的短。但这种机制有问题，我以屏幕分辩率为320*240为例。一块framebuffer的大小为:320*240*4=0.3072M。也就是说，我要先在内存中填写0.3M的内存，然后再把这块内存拷贝到framebuffer中。为了简单起见，这里我举一个将屏幕置为白色的例子，排除屏幕内容计算的影响。显示的实际过程为，将内存中0.3M置为0，然后读取这0.3M的内存，拷贝到Framebuffer中。下面我来计算单buffer所使用的时间。将0.3M内存置为0：0.3072×1000/200=1.5ms。读0.3M内存：0.3072×1000/135=2.7ms将03M内存写到framebuffer：0：0.3072×1000/200=1.5ms。总共时间为5.7ms。实际的传输情况要比这个多，因为还要涉及循环的开销。5.7ms看起来还行。当屏幕分辨率变大时，情况就不一样了。如果屏幕的分辨率扩大为800*600，那么其数据量将是320*240的6.25倍。那么单纯的显示一个白屏的时间，将为5.7*6.25=36.6ms，也就是说如果只是显示白屏的话，我们也最多显示30帧，这个时间实在是太长了。并且如果我们只计算从内存拷贝到framebuffer的时间，其为（2.7+1.5）*6.25=25.25ms。如何LED刷新频率为60hz，那么刷新一屏的时间将为18ms，这样即使单纯的从内存拷贝到framebuffer，写一屏的时间也大于LED的刷新频率，肯定会造成屏幕的闪烁。单buffer的另外一个问题在于，其每次都要进行内存拷贝，这样其会重新刷新CPU中的数据cache，对软件的性能有不利的影响。
+							性能的改善：从软件的角度来讲，每次尽量缩小刷新的区域，减少内存的传输。从硬件角度来讲，采用更高的CPU，采用更快的DDR内存，提高内存的吞吐率。下面再来说下双buffer。双buffer的好处在于，在LED显示当前framebuffer时，软件可以直接向后台的framebuffer写，在写完之后只是两个buffer做下切换即可，不再需要内存拷贝，从而提高效率。还是以显示一个320×240的白屏为例，其过程变成：1、 直接向后面的framebuffer写，其花费时间为0.3072×1000/200=1.5ms。2、 写完之后framebffer切换，这个时间可以忽略不计。那么当屏幕变为800×600时，其所花费的时间为1.5*6.25=9.375，要比单buffer的效率提高2.6倍。并且双buffer还有一个好处，由于其没有了内存拷贝的环节，其对数据cache的影响较小，对于提高软件性能有利。另外给framebuffer的数据置位，其必然要经过Cache，由于这些数据写完后不再使用，那么使用写透cache要比使用回写式cache效率高。双buffer还有一个好处，就是可以利用GPU的硬加速。如果要利用GPU的硬加速，则显示的数据必须是在预留的物理内存中，这在单buffer机制中是不能实现的。双buffer也有一个致命的弱点：那就是局部刷新。在单buffer的情况下，很容易实现局部刷新，只需要把局部的数据拷贝到对应的位置就可以了。而双buffer来讲，如果要实现局部刷新，则必须先将当前显示的buffer数据拷贝到后面的buffer，然后再做局部刷新。这样对于双buffer的设备来讲，刷新整屏的效率要比局部刷新更高。局部刷新的理想情况：将局部要修改的数据，直接写到另外一个显存中，与前buffer做叠加。应该说单buffer和双buffer各有擅长，关键在于如何灵活运用。
+							</div>
+							
+							<p><font color="#8B0000"> &nbsp &nbsp &nbsp &nbsp 上面没有格式化的文字看上去很头疼，简单来说就是为了保持屏幕不闪烁而使用两块显存做显示切换，一块做当前的显示，需要更新显示的内容在第二块显存上做操作，完成后只需要将显存地址切换至第二块即可。好处不必多说，劣势也有：局部刷新时，显示内容的拷贝填充等，关键在于如何灵活运用。
+							</p>
+							<p><font color="#B22222"> &nbsp &nbsp &nbsp &nbsp 同时还有一点需要注意的是：显存切换时需要在一屏刷新完成后切换！！！LCD中断寄存器：（BIT3）
+							</p>
+							<div align=center>
+								<a  title="LCD Interrupt"><img src="images/LPC4370/LCD_IT.png"></a>
+							</div>
+
+							<p><font color="#408080">&nbsp &nbsp &nbsp &nbsp RT-Thread RealBoard-LPC4088已经实现了双显存的配置，使用时可以参考：</p>	
+							<div align=center>
+								<a  title="code"><img src="images/LPC4370/LCD_IT_Soft.png"></a>
+							</div>
+							
+							<div align=center>
+								<a  href="images/LPC4370/drv_lcd.c" target="_blank" title="点我查看源码"><img src="images/LPC4370/down.png"></a>
+							</div>
+						</div>
+					</div>
+					<!-- *************************************************************************************************** -->
+				</div>
+			</div>
+		</div> <!-- /.content-container -->		
+		<footer>
+			<p>Copyright &copy; 2021 . 感恩有你 ~~~ iDream. </p>
+			<!--
+			<div class="social right">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</div>
+			-->	
+		</footer>
+	</div>	
+</body>
+
+<script>
+window.onload=function()
+{
+	var oBtn=document.getElementById("btn_show");
+	var oDemo=document.getElementById("demo"); oBtn.onclick=function()
+	{
+		if(oDemo.style.display=="block")
+		{
+			oDemo.style.display="none";
+		}
+		else
+		{
+			oDemo.style.display="block";
+		}
+	} 
+}
+</script>
+
+
+</html>
